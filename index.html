@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Copilot - Super Simple AI for Any Webpage | YourAIassistant</title>
+    <meta name="description" content="The easiest AI assistant for any webpage. Ask questions, fill forms instantly. Perfect for students and young professionals!">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">🤖</span>
+                <span class="logo-text">Your Copilot</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Super Simple AI Assistant
+                    <span class="highlight">For Any Webpage</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Ask AI questions about any webpage and fill forms instantly. 
+                    No complicated setup - just install and start chatting! Perfect for students and young professionals.
+                </p>
+                <div class="hero-buttons">
+                    <a href="https://chrome.google.com/webstore/detail/autocontext-voice-ai/ionkccbkjikklcjdnmkkolbhilednipj" 
+                       class="btn btn-primary" id="addToChromeBtn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                        Add to Chrome - It's Free! 🚀
+                    </a>
+                    <a href="#how-it-works" class="btn btn-secondary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <polygon points="5,3 19,12 5,21 5,3"></polygon>
+                        </svg>
+                        Watch Demo
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">10</span>
+                        <span class="stat-label">Free Requests/Day</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">🤖</span>
+                        <span class="stat-label">Multiple AI Models</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">⚡</span>
+                        <span class="stat-label">Instant Responses</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="extension-mockup">
+                    <div class="mockup-header">
+                        <div class="mockup-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <div class="mockup-title">AutoContext AI</div>
+                    </div>
+                    <div class="mockup-content">
+                        <div class="mockup-input">
+                            <span class="mockup-placeholder">"Summarize this article"</span>
+                        </div>
+                        <div class="mockup-response">
+                            <div class="response-line"></div>
+                            <div class="response-line short"></div>
+                            <div class="response-line"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section class="demo">
+        <div class="container">
+            <div class="section-header">
+                <h2>See It In Action</h2>
+                <p>Real example of Your Copilot summarizing a blog post</p>
+            </div>
+            <div class="demo-wrapper">
+                <div class="demo-image">
+                    <img src="demo-screenshot.png.jpeg" alt="Your Copilot Extension Demo" class="demo-screenshot">
+                </div>
+                <div class="demo-caption">
+                    <p><strong>User asks:</strong> "please summarize this blog"</p>
+                    <p><strong>AI responds:</strong> Instantly provides a detailed summary of the Alaska travel blog post</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>What It Actually Does</h2>
+                <p>Simple features that actually work - no complicated stuff!</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>Ask Questions</h3>
+                    <p>Just type what you want to know about any webpage. Super simple - no complicated commands!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📝</div>
+                    <h3>Fill Forms Fast</h3>
+                    <p>Get AI responses and click to fill any form field instantly. No more copy-pasting!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Works Everywhere</h3>
+                    <p>Works on any website - Google, social media, forms, articles. Just install and go!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Super Fast</h3>
+                    <p>Get answers in seconds. No waiting, no complicated setup - just pure speed!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎓</div>
+                    <h3>Perfect for Students</h3>
+                    <p>Great for research, homework help, and filling out applications. Made for young people!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Safe & Private</h3>
+                    <p>Your data stays private. We use Google sign-in and keep everything secure.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>Get started in just 3 simple steps</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Install & Sign In</h3>
+                        <p>Add the extension to Chrome and sign in with your Google account for secure access.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Type Your Request</h3>
+                        <p>Simply type your question or request in the text box.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Get AI Help</h3>
+                        <p>Receive intelligent responses that understand the webpage you're viewing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Simple, Transparent Pricing</h2>
+                <p>Choose the plan that works for you</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card free">
+                    <div class="plan-header">
+                        <h3>Free</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">0</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="plan-features">
+                        <li>✅ 10 AI requests per day</li>
+                        <li>✅ GPT-3.5 Turbo AI</li>
+                        <li>✅ Smart text input</li>
+                        <li>✅ Webpage context understanding</li>
+                        <li>✅ Text generation & correction</li>
+                        <li>✅ Google sign-in security</li>
+                        <li>✅ Basic support</li>
+                    </ul>
+                    <a href="https://chrome.google.com/webstore/detail/autocontext-voice-ai/ionkccbkjikklcjdnmkkolbhilednipj" 
+                       class="btn btn-outline">Get Started Free</a>
+                </div>
+                <div class="pricing-card basic">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="plan-header">
+                        <h3>Basic</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">1.99</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="plan-features">
+                        <li>✅ 50 AI requests per day</li>
+                        <li>✅ Ask questions about any webpage</li>
+                        <li>✅ Super simple to use</li>
+                        <li>✅ Perfect for daily use</li>
+                        <li>✅ Great for students</li>
+                        <li>✅ No complicated setup</li>
+                        <li>✅ Cancel anytime</li>
+                    </ul>
+                    <a href="payment.html" class="btn btn-primary">Upgrade to Basic</a>
+                </div>
+                <div class="pricing-card pro">
+                    <div class="pro-badge">Best Value</div>
+                    <div class="plan-header">
+                        <h3>Pro</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">3.99</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="plan-features">
+                        <li>✅ 200 AI requests per day</li>
+                        <li>✅ Auto-fill forms with one click</li>
+                        <li>✅ Ask questions about any webpage</li>
+                        <li>✅ Perfect for power users</li>
+                        <li>✅ Great for young professionals</li>
+                        <li>✅ Super fast responses</li>
+                        <li>✅ Cancel anytime</li>
+                    </ul>
+                    <a href="payment.html" class="btn btn-primary">Upgrade to Pro</a>
+                </div>
+            </div>
+            <div class="pricing-note">
+                <p>💳 All plans include secure payment processing. Cancel anytime.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about AutoContext AI</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How does the text input work?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Simply type your request in the text box and click send. Our AI will analyze your input along with the webpage context to provide intelligent and relevant responses.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is my data secure?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We use Google's secure OAuth system for authentication. Your API keys are stored locally in your browser using Chrome's secure storage. We don't collect or store your personal data.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What happens when I reach the daily limit?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Free users get 10 requests per day. Once you reach this limit, you can upgrade to Basic or Pro for more requests, or wait until the next day when your limit resets.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do I need an OpenAI API key?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No! We handle all the API keys for you. Simply sign in and start using the AI immediately. No setup or configuration required.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I cancel my subscription?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! You can cancel your subscription at any time. You'll continue to have access until the end of your current billing period, then return to the free plan.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Does it work on all websites?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! AutoContext AI works on any website. It can read the page content and provide context-aware responses based on what you're viewing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Supercharge Your Browsing?</h2>
+                <p>Join thousands of users who are already using AI to work smarter, not harder.</p>
+                <a href="https://chrome.google.com/webstore/detail/autocontext-voice-ai/ionkccbkjikklcjdnmkkolbhilednipj" 
+                   class="btn btn-primary btn-large">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    Add to Chrome - It's Free!
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-icon">🤖</span>
+                        <span class="logo-text">Your copilot for every page you visit</span>
+                    </div>
+                    <p>Your smart browser assistant powered by AI. Made with ❤️ by YourAIassistant.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="https://github.com/thekonquest/AutoContext-Voice-AI" target="_blank">GitHub</a></li>
+                        <li><a href="mailto:support@youraiasistant.com">Contact Support</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About YourAIassistant</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 YourAIassistant. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#privacy">Privacy</a>
+                    <a href="#terms">Terms</a>
+                    <a href="#cookies">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

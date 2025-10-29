@@ -1,0 +1,15 @@
+{
+  "name": "Your Copilot for Every Page You Visit",
+  "description": "Super simple AI assistant for any webpage. Chat + form autofill.",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "action": {
+    "default_title": "Your Copilot"
+  },
+  "permissions": [],
+  "host_permissions": [],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
+  }
+}
+

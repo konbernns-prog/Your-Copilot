@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upgrade Your Copilot</title>
+    <script src="https://js.stripe.com/v3/"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .payment-container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: #1e293b;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #64748b;
+            font-size: 16px;
+        }
+
+        .plans {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .plan-card {
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .plan-card:hover {
+            border-color: #3b82f6;
+            transform: translateY(-2px);
+        }
+
+        .plan-card.selected {
+            border-color: #3b82f6;
+            background: #f0f9ff;
+        }
+
+        .plan-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .plan-name {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .plan-price {
+            font-size: 24px;
+            font-weight: 700;
+            color: #3b82f6;
+        }
+
+        .plan-features {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .plan-features li {
+            padding: 4px 0;
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        .plan-features li::before {
+            content: "✅ ";
+            margin-right: 8px;
+        }
+
+        .payment-button {
+            width: 100%;
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 16px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-bottom: 20px;
+        }
+
+        .payment-button:hover {
+            background: #2563eb;
+        }
+
+        .payment-button:disabled {
+            background: #94a3b8;
+            cursor: not-allowed;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            color: #64748b;
+        }
+
+        .error {
+            background: #fee2e2;
+            color: #991b1b;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .success {
+            background: #d1fae5;
+            color: #065f46;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .back-button {
+            background: #f1f5f9;
+            color: #64748b;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .back-button:hover {
+            background: #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="payment-container">
+        <div class="header">
+            <h1>🤖 Upgrade Your Copilot</h1>
+            <p>Choose your plan and start getting more AI help!</p>
+        </div>
+
+        <div class="error" id="errorMessage"></div>
+        <div class="success" id="successMessage"></div>
+
+        <div class="plans">
+            <div class="plan-card" data-plan="basic">
+                <div class="plan-header">
+                    <div class="plan-name">Basic Plan</div>
+                    <div class="plan-price">$1.99<span style="font-size: 14px; font-weight: 400;">/month</span></div>
+                </div>
+                <ul class="plan-features">
+                    <li>50 AI requests per day</li>
+                    <li>Ask questions about any webpage</li>
+                    <li>Super simple to use</li>
+                    <li>Perfect for daily use</li>
+                    <li>Great for students</li>
+                </ul>
+            </div>
+
+            <div class="plan-card selected" data-plan="pro">
+                <div class="plan-header">
+                    <div class="plan-name">Pro Plan</div>
+                    <div class="plan-price">$3.99<span style="font-size: 14px; font-weight: 400;">/month</span></div>
+                </div>
+                <ul class="plan-features">
+                    <li>200 AI requests per day</li>
+                    <li>Auto-fill forms with one click</li>
+                    <li>Ask questions about any webpage</li>
+                    <li>Perfect for power users</li>
+                    <li>Great for young professionals</li>
+                </ul>
+            </div>
+        </div>
+
+        <button class="payment-button" id="paymentButton">
+            Subscribe to Pro Plan - $3.99/month
+        </button>
+
+        <div class="loading" id="loading">
+            Processing payment...
+        </div>
+
+        <button class="back-button" onclick="window.close()">
+            ← Back to Extension
+        </button>
+    </div>
+
+    <script src="payment.js"></script>
+</body>
+</html>
